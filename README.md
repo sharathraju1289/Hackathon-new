@@ -6,7 +6,7 @@ Real estate web app built with React + Vite.
 - Property gallery with 100+ house images
 - Fullscreen image gallery
 - Chatbot integration
-- Wishlist &amp; Schedules
+- Wishlist & Schedules
 - Responsive design with Framer Motion animations
 
 ## Quick Start
