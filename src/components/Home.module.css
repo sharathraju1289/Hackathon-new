@@ -1,0 +1,135 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--glass-border);
+  gap: 2rem;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.searchBar {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.searchBar:focus-within {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
+}
+
+.searchInput {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+.filtersWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.filterBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.filterBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.filterBtnActive {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+  font-weight: 500;
+}
+
+.filterBtnActive:hover {
+  background: var(--accent-hover);
+}
+
+.main {
+  padding: 2rem 3rem;
+  flex: 1;
+}
+
+.header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header h2 {
+  font-size: 2rem;
+  background: linear-gradient(to right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  color: var(--text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .searchBar {
+    max-width: 100%;
+  }
+  .filters {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  .main {
+    padding: 1rem;
+  }
+}
